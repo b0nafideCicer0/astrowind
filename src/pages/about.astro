@@ -1,0 +1,228 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About TAO',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      Join us in our mission to bring social change with our <br />
+      <span class="text-accent dark:text-white highlight"> Empowerment and Outreach Programs</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      As part of fulfilling one of our core values of Women and Youth Empowerment, Together As One has implementeda an anti-drug 
+      abuse and alternative to sex working. Our approach is to educate Women and Youth who are being affected by these problems,
+      on the negative aspects of them, and to provide them with education programs that will aid them in coming up with alternative
+      sources of income and a better way of living.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Statistics about us"
+    stats={[
+      { title: 'Offices', amount: '2' },
+      { title: 'Employees', amount: '20' },
+      { title: 'Awards', amount: '2' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Our Programs"
+    subtitle="The Organisation is involved ina number of programs that are geared towards pormoting social change, Women and Youth Empowerment, and Information Dissemination"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Women and Youth Empowerment Program',
+        description:
+          'We impart life skills and incomme generating projects to help women and youth come up with alternative income solutions.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'The annual MUGARIRO COMMUNITY WINTER ARTS FESTIVAL',
+        description:
+          'MUCOWAFEST is a festival that was started in order to bring to light annual toopics that trouble society, to promote town tourism and also to advertise upcoming brands. ',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Information Dissemination',
+        description:
+          'We create platforms for information disseminations such as our blog, newsletter, website, mailing list and other sociola media platforms.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Drug Abuse, Sexual Health Awareness, Child Marriage, Domestic Violence',
+        description:
+          'We educate you on the burning issues of Child Marriages, Drug Abuse, Sexual Health Awareness and Human Rights Advocacy',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget 
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'E-commerce',
+        description:
+          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Blog',
+        description:
+          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Business',
+        description:
+          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Branding',
+        description:
+          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Medical',
+        description:
+          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fashion Design',
+        description:
+          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  /> ************** -->
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our Values"
+    subtitle="We are a company that is based on principles of good ethics and integrity"
+    items={[
+     {
+        title: 'Innovation',
+        description:
+          '',
+      },
+      {
+        title: 'Communication',
+        description:
+          '',
+      },
+      {
+        title: 'Development',
+        description:
+          '',
+      },
+      {
+        title: 'Gender Equality',
+        description:
+          '',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Achievements"
+    subtitle="What we have gained over the years!"
+    isReversed={true}
+    callToAction={{
+      text: 'More',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'National Impact',
+        description: '',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Positive Success Stories and Postitive Community Feedback',
+        description:
+          '',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Awards and Recognition from Notable Institutions',
+        description:
+          '',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our locations"
+    tagline="Find us"
+    columns={}
+    items={[
+      {
+        title: 'Highfield Office',
+        description: '7434 Jabavu Drive East, Higfield, Harare',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Technical Support"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with us',
+        description:
+          '',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call us',
+        description:
+          '',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

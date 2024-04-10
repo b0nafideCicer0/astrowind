@@ -1,0 +1,388 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Team TAO',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Team TAO!', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Our Projects', href: '#porfolio' },
+        { text: 'TAO Blog', href: '#blog' },
+      ]}
+     isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Washington Masenda"
+    tagline="The Director"
+  >
+    <Fragment slot="subtitle">
+      I am a community organiser who is passionate about seeing changing people's lives . With over
+      30 years of experience in the field of mass information awaress and health promotion,
+      leading teams from fields as diverse as drama and creative arts to social work.
+    
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+  
+    image={{
+      src: `~/assets/images/wmasenda.jpg`,
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <p>
+     Hello there! I'm a passionate community organizer and health promoter with a unique twist – I come from a background steeped in creative arts performances.
+      With a blend of creativity and advocacy, I've dedicated myself to fostering positive change within communities by harnessing the power of the arts to promote health and well-being.
+     </p>
+      <br />
+      <p>
+      From a young age, I've been captivated by the transformative potential of artistic expression. Whether through music, theater, or visual arts, I've witnessed firsthand how creative endeavors can inspire, educate, and unite people from all walks of life. 
+      Drawing on my background in the arts, I've embarked on a journey to use my talents and passion for the betterment of society.
+     </p>
+      <br />
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Work experience"
+    items={[
+      {
+        title:
+          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Work Ethic"
+    subtitle="Discover the qulities that allow me to bring imagination to life through teaching and doing."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Creativity',
+        description: '',
+      },
+      {
+        title: 'Strong communication',
+        description: '',
+      },
+      {
+        title: 'Development',
+        description: '',
+      },
+      {
+        title: 'Gender equality',
+        description: '',
+      },
+      {
+        title: 'Optimal use of scare resources',
+        description: '',
+      },
+      {
+        title: 'Maximising Media',
+        description: '',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="porfolio"
+    title="Projects That We Have Worked On"
+    subtitle="We have worked on a wide range of projects spanning from creative arts performances, youth empowerment, drug awareness, community organisation, health promotion and information dissemination. Here are a Few"
+    isReversed
+    items={[
+      {
+        title: 'Description',
+        description:
+          'We have been conducting a long running campaing and help effort against human Trafficking',
+      },
+      {
+        title: 'Role:',
+        description:
+          '',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/humantrafficking.jpg',
+      alt: 'Human Trafficking Poster',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 1: <br /><span class="text-2xl">Campaign Against The Brutality of Human Trafficking</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Teaching and educating domestic workers and conduscting a mass media campaign on how to protect oneself from modern day slavery',
+      },
+      {
+        title: 'Role:',
+        description: `Project coordinator `,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/domesticworkers.jpg',
+      alt: 'Domestic Workers Poster',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl">Advocacy For Empowering Domestic Workers</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description: `Protecting the rights of migrant workers against human trafficking and sexual and physical exploitation`,
+      },
+      {
+        title: 'Role:',
+        description: `Project coordinator`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/migrants.jpg',
+      alt: 'Migrants poster',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 3: <br /><span class="text-2xl">Protecting The Rights Of Migrant Workers</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  
+
+  <!-- The Team Widget *********** -->
+
+  <Testimonials
+    title="The Team"
+    subtitle="TAO is a diverse organisation that engages volunteers, interns and permanent staff in helping shape gear our visions forward"
+    testimonials={[
+      {
+        testimonial: `TAO pushed me to go outside of my comfort zone as far as developing IT solutions was concerned.`,
+        name: 'Mambo Zulu',
+        job: 'Systems Administrator',
+        image: {
+          src:`~/assets/images/mambo.jpg`,
+          alt: ' Mambo Zulu Image',
+        },
+      },
+      {
+        testimonial: `Together As One has given me the opportunity to know how to manage complex projects, and do work that I could only have dreamed of, if i was in a large institution`,
+        name: 'Tinotenda Pembere',
+        job: 'Social Worker ',
+        image: {
+          src: ``,
+          alt: 'Tino Pembere Image',
+        },
+      },
+      {
+        testimonial: `TAO has given me the opportunity to grow from a young attachee to being awarded oppotubitites that found me representing an entire district. The work exposure, and getting to interact with people from the community really opened my eyes`,
+        name: 'Nyasha Gona',
+        job: 'Social Worker ',
+        image: {
+          src: '',
+          alt: 'Nyasha Gone Image',
+        },
+      },
+      {
+        testimonial: `TAO is a good organisation. It is all about getting our hands dirty and trying to help as much as we can here.`,
+        name: 'Elizabeth Chiguvare',
+        job: 'Social Worker and Health Promoter',
+        image: {
+          src: '',
+          alt: 'Elizabeth Chiguvare Image',
+        },
+      },
+      {
+        testimonial: `I have had the opportunity to work and deal with different types of people, which has given me a lot of exposure as far as dealing with people is concered. i have learnt a lot`,
+        name: 'Praise Chimusoro ',
+        job: 'Social Worker ',
+        image: {
+          src: '',
+          alt: 'Praise Chimusoro Image',
+        },
+      },
+      {
+        testimonial: `At TAO, our work is all about dealing with people and information. I have so muchand the most valuable thing I have now, is the ability to use information to persuade people in oneform or the other`,
+        name: 'Chelsea Chikwavaire',
+        job: 'Social Worker ',
+        image: {
+          src: '',
+          alt: 'Chelsea Chikwavaire Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Testimonials"
+    subtitle="some testimonials from people we have worked with."
+    testimonials={[
+      {
+        testimonial: `He came to my former school and he introduced Together As One policy so as to nurture the drama club at school. We used to meet after school for drama sessions and we could perform at shows such as World Aids Day, awareness programmes etc.He helped me to develop my talent in acting and now I’m a graduate`,
+        name: 'Everson Ndlovhu',
+        job: 'Actor',
+        image: {
+          src:``,
+          alt: 'Everson Ndlovhu Image',
+        },
+      },
+      {
+        testimonial: `If it wasn’t for Masenda, I would never have known that working for the community is such a pleasant and respectable activity.`,
+        name: 'Dorica Mavi' ,
+        job: 'CEO',
+        image: {
+          src: '',
+          alt: 'Dorica Mavi Image',
+        },
+      },
+      {
+        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        name: 'James Mukwindidza',
+        job: 'Actor and CEO',
+        image: {
+          src: '',
+          alt: 'James Mukwindidza Image',
+        },
+      },
+      {
+        testimonial: ` Masenda has done a lot for the community such as advocacy for HIV and Aids drama. He is called for different workshops to present on health issues. Masenda works with different groups of people even outside his community. In Aids issues he has managed to reduce discrimination because of his teaching`,
+        name: 'Simon Hove',
+        job: 'MP, Highfield West',
+        image: {
+          src: '',
+          alt: 'Simon Hove Image',
+        },
+      },
+      
+   ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Let's create change together!"
+    subtitle="Are you ready to change your community and transform lives?"
+    actions={[{
+      variant:"primary",
+      text: 'Contact Us',
+      href: 'https://togetherasoneprograms@gmail.com',
+    }]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explore insightful articles on our blog"
+    information={`Please checkout our blog, we post intersting information on drug awareness, sexual reproductive
+                  health awareness, women and youth empowerment and other little informativenuggets. Thanks in advance!.
+ `}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact Us!',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Let's Connect!" />
+
+  <ContactUs
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team usually responds within 24 business hours."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'General support',
+        description: `Chat with us for inquiries related to specicif help that you may need, website navigation, how to book meetings with us and any other help you may need or information you desire to know. Do not be shy.`,
+      },
+      {
+        title: 'Contact sales',
+        description:
+          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+      },
+      {
+        title: 'Technical support',
+        description:
+          'If there are any technical difficulties associated with this website or any of our other platforms, do not hesitate to contact!',
+      },
+      {
+        title: 'Phone',
+        description: '+263 77 232 9137',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'togetherasone@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: '7434 Jabavu Drive East, Higfield, Harare',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

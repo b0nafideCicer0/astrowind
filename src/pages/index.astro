@@ -1,0 +1,361 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Together As One',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      TOGETHER AS ONE <span class="hidden xl:inline"></span>
+      <span class="text-accent dark:text-white highlight"></span> 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Together As One</span> is a Private Voluntary Organisation, that focuses 
+        primarily in Women and Youth Empowerment, Drug and SRH Awareness, Education and Information 
+        Dissemination- but we are always helping! .</span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Who We Are"
+    title="What Do We Do At TAO?"
+    subtitle="Our primary mission is to help, educate, server and empower those who are most vulnerable."
+    items={[
+      {
+        title: 'We empower women and youth',
+        description:
+          'We impart life skills and incomme generating projects to help women and youth come up with alternative income solutions.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'We are health promoters',
+        description:
+          'Conscientize communities on health through information dissemination, making use of social media platforms like facebook and tiktok.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'We disseminate information',
+        description:
+          'We create platforms for information disseminations such as our blog, newsletter, website, mailing list and other sociola media platforms.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'We are child and human rights advocates',
+        description:
+          'From looking after orphans to lobbying against child marriages and exploitation and helping those who have been vistimised in any way whatsoever',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'We deliver!',
+        description:
+          "We deliver results as fast as we can, we are always up for new  and difficult challenges",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'We are collaborators and thinkers',
+        description:
+          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a better and conscious community.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="How We Do It!"
+    title="TAO's Blueprint: Innovation Meets Progress!"
+    items={[
+      {
+        title: 'Promoting Women and Youth Empowerment',
+        description:
+          'We impart life skills and incomme generating projects to help women and youth come up with alternative income solutions.',
+      },
+      {
+        title: 'Disseminating information with all resources',
+        description:
+          'We create platforms for information disseminations such as our blog, newsletter, website, mailing list and other sociola media platforms.',
+      },
+      {
+        title: 'Awarenesss through the Creative Arts',
+        description:
+          'Together As One started off as a drama organisation, that focused on teaching through the theatre. Our fevour for the creative arts has therefore always been one of our driving forces in work!',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
+      Be a part of a progressive community-driven change. Be the change1
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Participate',
+        description: `Help TAO by contirbuting the smallest efforts and watch how it helps us!`,
+      },
+      {
+        title: 'Donate',
+        description:
+          'We are open for donations, as an organisation that focuses on charitable activities, we rely mostly on monetary and material donations. A slice of bread could save a change somoenes night',
+      },
+      {
+        title: 'Volunteer',
+        description:
+          "We are an organisation that takes a unique work ethic approach and we encourage anyone to come and help! Your skills are needed",
+      },
+      {
+        title: 'Integration of media',
+        description:
+          'We stress very ardently on making optimal use of effective communication through media. We use media as a means of delivwering information on the fly',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Ensure that you are part of the machine!</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'A helping hand always',
+        description:
+          'WE ARE ALWAYS HERE TO HELP- RELENTLESSLY',
+      },
+      {
+        title: 'Pioneers in Creative Arts',
+        description:
+          'From drama, public speaking, plays, poetry, music and lots more- we make use of all forms of art to get our message out there',
+      },
+      {
+        title: 'Community Organisers!',
+        description:
+          'We have organised Festivals, Campaigns and Sponsored Walks- all to great successand to promote our values and agendas',
+      },
+      {
+        title: 'Health Promoters',
+        description: `We have carried out health promotion activities on drug abuse, sexual reproductive health, contagious diseases and many more`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">We are here to foster growth and success.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Make it to the top, and stay there!"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Be Innovative</span>',
+        description:
+          "",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Be Empowered</em>',
+        description:
+          "",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Be Conscious</span>',
+        description:
+          '',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Just Browse Through These Facts Really Quick"
+    subtitle="A summary of what the organisation is and we it does"
+    tagline=""
+    items={[
+      {
+        title: 'Pioneers',
+        description: "We have trailblazed in the use of mass media awareness, health promotion, advocacy and community organisatin",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Hero Makers',
+        description:
+          "Our organisation makes heros from the community, check out our testimonials section at 'Team Tao!'",
+        icon: 'flat-color-icons:gallery',
+      },
+            
+     {
+        title: 'Advocators!',
+        description:
+          'We Advocate For Human Rights and for Women and Youth Empowerment',
+        icon: 'flat-color-icons:advertising',
+      },
+      
+      {
+        title: 'Testimonials',
+        description: 'Step into the gossip corner! Here, you can hear testimonies of people that have been through TAO and have founded their own organisations or been employed by bigger organisations',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+        
+          ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`Please checkout our blog, we post intersting information on drug awareness, sexual reproductive
+                  health awareness, women and youth empowerment and other little informativenuggets. Thanks in advance!.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Common questions from the community and from organisations about TAO- shedding a bit of light."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Yes We Are A PVO, wait... what is a PVO?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'How can I be a part of the organisation?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'MUCOWAFEST and Town Tourism- how does that work?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "Is your organisation only focused with women and youth?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'How old is TAO?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'How do PVOs and NGOsmake money?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Members', amount: '0' },
+      { title: 'Partnerships', amount: '0' },
+      { title: 'Affiliates', amount: '0' },
+      { title: 'Donors', amount: '0' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Donate',
+        href: 'https://taoprgrams@gmail.com',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+     Together As&nbsp;&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">One</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      The smallest donations will surely make a huge impact in aiding our cause. We appreciate you!
+    </Fragment>
+  </CallToAction>
+</Layout>

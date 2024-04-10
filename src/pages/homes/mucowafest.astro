@@ -1,0 +1,287 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+import YoutubeVideo from '~/components/common/YoutubeVideo.astro';
+
+const metadata = {
+  title: 'The Annual MUCOWAFEST',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="THE ANNUAL MUGARIRO COMMUNITY WINTER ARTS FESTIVAL"
+ 
+  
+  >
+    <Fragment slot="title">
+      2024 <span class="hidden sm:inline">MUCOWAFEST:</span> <span
+        class="text-accent dark:text-white highlight"></span
+      > 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+     This year we are tackling the pressing issues of early child marriages, gender inequality, 
+     and drug and substance abuse. We also wish to promote town tourism and provide a platform for 
+     brands to showcase themselves.
+    </Fragment>
+
+    <Fragment slot="image">
+      <YoutubeVideo videoId="gxBkghlglTg" title="MUCOWAEST 2024... Keeping Track of Society and Where it is going" />
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="How IS MUCOWAFEST 2024 DIFFERENT?"
+    subtitle="We are gearing towards making maximum use of the theatre, stage and other creative mediums of expression to introduce our concepts."
+      >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="PREVIOUS MUCOWAFEST IMPACT"
+    subtitle="The numbers below reflect figures from the 2013 MUCOWAFEST ."
+    stats={[
+      { title: 'Turnout', amount: '7K' },
+      { title: 'Embassies Present', amount: '20' },
+      { title: 'Positive Feedback', amount: '4/5' },
+    ]}
+  />
+
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Partnerships & Collaborations"
+    subtitle="At Together As One, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    icons={[]}
+    images={[
+      {
+        src: '~/assets/images/nac.png',
+        alt: 'nac',
+      },
+      {
+        src: '~/assets/images/assitej.png',
+        alt: 'assitej',
+      },
+      {
+        src: '~/assets/images/nacz.png',
+        alt: 'nacz',
+      },
+
+      {
+        src: '~/assets/images/nangologo.png',
+        alt: 'nangologo',
+      },
+      
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="What Themes Are We Addressing This Year?"
+    subtitle="These year, we are stressing on the issues of Child Marriage, Drug Abuse and HUman Rights "
+    items={[
+      {
+        title: 'Child Marriage and Exploitation',
+        description:
+          'Using our creative approaches to enlighten the world on the horrors of childmarriage and how we are working towards eradicating it in Zimbabwe ',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Drug Abuse- The Pandemic',
+        description:
+          'Engaging the community and the youth in activities where they will be able talk about drug abuse and how it has affected communities',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Human Rights Advocacy',
+        description:
+          'Every human deserves the right to be heard, this year we will shed light on the controversial and broad topic ofhuman rights violation and how people should stand up for themselvfes',
+      icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features Widget 
+  <Features
+    id="features"
+    title="Main features of our templates"
+    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
+    columns={3}
+    items={[
+      {
+        title: 'Modern and Professional Design',
+        description:
+          'Have a contemporary design that reflects current design trends and gives a professional impression.',
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Responsive and Mobile-Friendly',
+        description: 'Adapt seamlessly to different screen sizes and devices to ensure a consistent experience.',
+        icon: 'tabler:picture-in-picture',
+      },
+      {
+        title: 'Customizability',
+        description:
+          'Easily customizable, allowing users to adapt the design, colors, typography, and content to match their brand identity.',
+        icon: 'tabler:adjustments-horizontal',
+      },
+      {
+        title: 'Fast Loading Times',
+        description: 'Optimized for speed to ensure a smooth user experience and favorable search engine rankings.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Search Engine Optimization (SEO)',
+        description:
+          'Incorporate SEO best practices in template structure and code to improve visibility in search engine results.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Compatibility',
+        description: 'The templates work seamlessly across various content management systems and website builders.',
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget 
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'What are landing page templates?',
+        description:
+          'Landing page templates are pre-designed web page layouts that are specifically created to serve as a foundation for building effective landing pages. These templates are designed to capture the attention of visitors and guide them towards a specific action or goal, such as signing up for a newsletter, making a purchase, or downloading a resource.',
+      },
+      {
+        title: 'Why should I use a template?',
+        description:
+          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
+      },
+      {
+        title: 'Can I preview templates before buying?',
+        description:
+          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
+      },
+      {
+        title: 'Do I need technical skills to use a template?',
+        description:
+          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
+      },
+      {
+        title: 'Can I use the template on multiple websites?',
+        description:
+          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
+      },
+      {
+        title: 'What if I need help with customization?',
+        description:
+          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs> ******************* -->
+
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Let us know how we can help"
+    subtitle="We’re here to help and answer any question you might have."
+    columns={4}
+    items={[
+      {
+        title: 'Phone',
+        icon: 'tabler:phone',
+        callToAction: {
+          target: '_blank',
+          text: 'Call us',
+          href: '/contact',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Email',
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: 'Write to us',
+          href: 'https://togetherasone@gmail.com',
+          variant: 'link',
+        },
+      },
+      
+      {
+        title: 'Visit Us!',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: 'Visit "The Tao Offices',
+          href: '/',
+          variant: 'link',
+        },
+      },
+      
+      {
+        title: 'Chat with support',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: 'Start chatting',
+          href: '/contact',
+          variant: 'link',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'Be A Sponsor?',
+        href: 'https://togetherasone@gmail.com',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">Be a part of our vision</Fragment>
+
+    <Fragment slot="subtitle">
+     You can be a part of the change and contribute towards shaping live and changing communities. 
+     We are only a click away. Be a Sponsor of the organisaiton and allow your brand to be at the 
+     forefront of social change 
+    </Fragment>
+  </CallToAction>
+</Layout>
